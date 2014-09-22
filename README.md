@@ -24,16 +24,16 @@ The script sees:
 - 'test/y_test.txt': Test labels.
 
 Processing Steps:
-1 - Read in data files.  The test files:  subject_test.txt, y_test.txt, and X_test.txt
+- 1 - Read in data files.  The test files:  subject_test.txt, y_test.txt, and X_test.txt
     are read first and bound column wise.  An empty column is added to store activity
     labels.  The same read and cbind action is done to the train files.
-2 - Two data frames from 1 are row bound together.
-3 - The columns are renamed 'Source', 'Subject_ID', 'Activity_ID', 'Activity', ...
+- 2 - Two data frames from 1 are row bound together.
+- 3 - The columns are renamed 'Source', 'Subject_ID', 'Activity_ID', 'Activity', ...
     where ... are the names read directly from features.txt
-4 - The Activity column is populated with text names according to Activity_ID,
+- 4 - The Activity column is populated with text names according to Activity_ID,
     as defined in activity_labels.txt
-5 - The result is subset to removed unwanted column and written out as tidy.txt   *
-6 - The result from 5 is reshaped to calculate the mean of each variable for each 
+- 5 - The result is subset to removed unwanted column and written out as tidy.txt   *
+- 6 - The result from 5 is reshaped to calculate the mean of each variable for each 
     activity and each subject.  The result is written out as tidy_summary.txt
 
 * Note to graders:  It was a bit unclear too me, which columns were to be included in
